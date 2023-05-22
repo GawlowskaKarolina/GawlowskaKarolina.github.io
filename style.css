@@ -86,7 +86,8 @@ h1 {
 }
 
 #portfolio-btn {
-    background: linear-gradient(90deg, #2E8BC0 0%, #16445f 100%);
+    background: linear-gradient(90deg, #591616 0%, #954a4a 100%);
+    
 }
 
 
@@ -96,7 +97,7 @@ h1 {
 
 
 #barvy-btn {
-    background: linear-gradient(90deg, #591616 0%, #954a4a 100%);
+    background: linear-gradient(90deg, #2E8BC0 0%, #16445f 100%);
 }
 
 

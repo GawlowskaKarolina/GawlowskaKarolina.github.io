@@ -3,27 +3,428 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="logo_kg.png">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="style.css">
-    <title>Rozcestníček</title>
+    <title>Karolína Gawlowská | Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/KG.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div id="home" class="flex-column flex-center">
-            <h1>Rozcestníček</h1>
-            <a href="#!" id="portfolio-btn" class="btn">Cedmo web </a>
-            <a href="https://gawlowskakarolina.github.io/edutech_GP/index.html" id="kyber-btn" class="btn">Edukační
-                technologie - kyberbezpečnost </a>
-            <a href="https://gawlowskakarolina.github.io/Barvy/index.html" id="barvy-btn" class="btn">Výukové aplikace - barvy </a>
-            <div class="zapati">© Karolína Gawlowská
+    <header> <div class="logo">
+        <a href="#">
+            <img src="assets/KG.png" alt="Logo Karolína Gawlowská">
+        </a>
+    </div> <nav>
+        <ul>
+            <li><a href="#me">O mně</a></li>
+            <li><a href="#skills">Dovednosti</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+</header>
+
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="#me">O mně</a></li>
+            <li><a href="#skills">Dovednosti</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+    </div>
+
+    <section id="me" class="hero">
+        <div class="hero-content">
+            <h1 class="typewriter"></h1>
+            <p>Grafická a IT specialistka</p>
+            <a href="#portfolio" class="button primary">Odkazy na mé práce<i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <h4>Dovednosti a Technologie</h4>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h5><i class="fas fa-paint-brush"></i> Grafický Design</h5>
+                <ul>
+                    <li>Affinity</li>
+                    <li>Canva</li>
+                    <li>Figma</li>
+                    <li>typografie, kompozice, layout</li>
+                    <li>infografika, prezentace, grafiky</li>
+                    <li>branding, vizuální identita, ilustrace</li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h5><i class="fas fa-code"></i> IT & Frontend</h5>
+                <ul>
+                    <li>HTML5 / CSS3 / JS / PHP</li>
+                    <li>React / NodeJS / NextJS / Typescript</li>
+                    <li>C, C++, Java, Python</li>
+                    <li>základy AD/GP, DB (SQL) a Azure</li>
+                    <li>MS Office</li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h5><i class="fas fa-laptop-code"></i> Ostatní</h5>
+                <ul>
+                    <li>MS Office</li>
+                    <li>Angličtina (B1)</li>
+                    <li>kreativní tvorba</li>
+                    <li>komunikační dovednosti</li>
+                    <li>projektové řízení</li>
+                    <li></li>
+                </ul>
             </div>
         </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Mé Práce</h2>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-grip-horizontal"></i> Vše
+            </button>
+
+            <button class="filter-btn" data-filter="grafiky">
+                <i class="fas fa-paint-brush"></i> Grafiky
+            </button>
+
+            <button class="filter-btn" data-filter="prezentace">
+                <i class="fas fa-chart-bar"></i> Prezentace
+            </button>
+
+            <button class="filter-btn" data-filter="ostatni">
+                <i class="fas fa-ellipsis-h"></i> Ostatní
+            </button>
+        </div>
+        <div class="portfolio-grid">
+
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/plakat1.png', 'Plakát 1')">
+                <img src="assets/plakat1.png" alt="Plakat 1">
+                <div class="overlay">
+                    <h3>Plakát 1</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/plakat2.png', 'Plakát 2')">
+                <img src="assets/plakat2.png" alt="Plakat 2">
+                <div class="overlay">
+                    <h3>Plakát 2</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/plakat3.png', 'Plakát 3')">
+                <img src="assets/plakat3.png" alt="Plakat 3">
+                <div class="overlay">
+                    <h3>Plakát 3</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/plakat4.png', 'Plakát 4')">
+                <img src="assets/plakat4.png" alt="Plakat 4">
+                <div class="overlay">
+                    <h3>Plakát 4</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/plakat5.png', 'Plakát 5')">
+                <img src="assets/plakat5.png" alt="Plakat 5">
+                <div class="overlay">
+                    <h3>Plakát 5</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/plakat6.png', 'Plakát 6')">
+                <img src="assets/plakat6.png" alt="Plakát 6">
+                <div class="overlay">
+                    <h3>Plakát 6</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/plakat7.png', 'Plakát 7')">
+                <img src="assets/plakat7.png" alt="Plakát 7">
+                <div class="overlay">
+                    <h3>Plakát 7</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/plakat8.png', 'Plakát 8')">
+                <img src="assets/plakat8.png" alt="Plakát 8">
+                <div class="overlay">
+                    <h3>Plakát 8</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/plakat9.png', 'Plakát 9')">
+                <img src="assets/plakat9.png" alt="Plakát 9">
+                <div class="overlay">
+                    <h3>Plakát 9</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky"
+                onclick="openModal('assets/ZDRAVI.png', 'Infografika1')">
+                <img src="assets/ZDRAVI.png" alt="Infografika1">
+                <div class="overlay">
+                    <h3>Infografika 1</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky"
+                onclick="openModal('assets/ebikeMedian.png', 'Infografika2')">
+                <img src="assets/ebikeMedian.png" alt="Infografika2">
+                <div class="overlay">
+                    <h3>Infografika 2</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky"
+                onclick="openModal('assets/HateFree.png', 'Infografika3')">
+                <img src="assets/HateFree.png" alt="Infografika3">
+                <div class="overlay">
+                    <h3>Infografika 3</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky"
+                onclick="openModal('assets/HateFree2.png', 'Infografika4')">
+                <img src="assets/HateFree2.png" alt="Infografika4">
+                <div class="overlay">
+                    <h3>Infografika 4</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/cedmo1.png', 'Infografika5')">
+                <img src="assets/cedmo1.png" alt="Infografika5">
+                <div class="overlay">
+                    <h3>Infografika 5</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/cedmo2.png', 'Infografika6')">
+                <img src="assets/cedmo2.png" alt="Infografika6">
+                <div class="overlay">
+                    <h3>Infografika 6</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/cedmo3.png', 'Infografika7')">
+                <img src="assets/cedmo3.png" alt="Infografika7">
+                <div class="overlay">
+                    <h3>Infografika 7</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/mapa1.png', 'Mapa 1')">
+                <img src="assets/mapa1.png" alt="Mapa 1">
+                <div class="overlay">
+                    <h3>Mapa 1</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/mapa2.png', 'Mapa 2')">
+                <img src="assets/mapa2.png" alt="Mapa 2">
+                <div class="overlay">
+                    <h3>Mapa 2</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/mapa3.png', 'Mapa 3')">
+                <img src="assets/mapa3.png" alt="Mapa 3">
+                <div class="overlay">
+                    <h3>Mapa 3</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/mapa4.png', 'Mapa 4')">
+                <img src="assets/mapa4.png" alt="Mapa 4">
+                <div class="overlay">
+                    <h3>Mapa 4</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/mapa5.png', 'Mapa 5')">
+                <img src="assets/mapa5.png" alt="Mapa 5">
+                <div class="overlay">
+                    <h3>Mapa 5</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/mapa6.png', 'Mapa 6')">
+                <img src="assets/mapa6.png" alt="Mapa 6">
+                <div class="overlay">
+                    <h3>Mapa 6</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/mapa7.png', 'Mapa 7')">
+                <img src="assets/mapa7.png" alt="Mapa 7">
+                <div class="overlay">
+                    <h3>Mapa 7</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+             <div class="portfolio-item" data-category="grafiky" onclick="openModal('assets/mapa8.png', 'Mapa 8')">
+                <img src="assets/mapa8.png" alt="Mapa 8">
+                <div class="overlay">
+                    <h3>Mapa 8</h3>
+                    <p>Kategorie: Grafiky</p>
+                </div>
+            </div>
+
+
+            <div class="portfolio-item" data-category="prezentace">
+                <a href="assets/Pencilcode.pdf" target="_blank" aria-label="Zobrazit Obhajobu diplomové práce (PDF)">
+                    <img src="assets/Pencilcode.png" alt="Prezentace Obhajoba DP">
+                    <div class="overlay">
+                        <h3>Obhajoba DP</h3>
+                        <p>Kategorie: Prezentace</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portfolio-item" data-category="prezentace">
+                <a href="assets/digi.pdf" target="_blank" aria-label="Zobrazit Digi smena (PDF)">
+                    <img src="assets/digi.png" alt="Digi smena">
+                    <div class="overlay">
+                        <h3>Digitální směna</h3>
+                        <p>Kategorie: Prezentace</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portfolio-item" data-category="prezentace">
+                <a href="assets/GD.pdf" target="_blank" aria-label="Zobrazit Rozdily(PDF)">
+                    <img src="assets/GD.jpg" alt="Rozdily">
+                    <div class="overlay">
+                        <h3>Rozdíly mezi grafiky a smrtelníky</h3>
+                        <p>Kategorie: Prezentace</p>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="portfolio-item" data-category="prezentace">
+                <a href="assets/sharks.pdf" target="_blank" aria-label="Zobrazit Zraloky (PDF)">
+                    <img src="assets/zraloci.png" alt="Zraloci">
+                    <div class="overlay">
+                        <h3>Žraloci</h3>
+                        <p>Kategorie: Prezentace</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portfolio-item" data-category="prezentace">
+                <a href="assets/presentation.pdf" target="_blank" aria-label="Zobrazit Psychologie barev (PDF)">
+                    <img src="assets/psycho.png" alt="Psychologie barev">
+                    <div class="overlay">
+                        <h3>Psychologie barev</h3>
+                        <p>Kategorie: Prezentace</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portfolio-item" data-category="ostatni"
+                onclick="openModal('assets/AI_certifikat.png', 'Certifikát Elements of AI')">
+                <img src="assets/AI_certifikat.png" alt="Certifikat">
+                <div class="overlay">
+                    <h3>Certifikát Elements of AI</h3>
+                    <p>Kategorie: Ostatní</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="ostatni" onclick="openModal('assets/CV_gawl.png', 'CV')">
+                <img src="assets/CV_gawl.png" alt="CV">
+                <div class="overlay">
+                    <h3>CV Gawlowská</h3>
+                    <p>Kategorie: Ostatní</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="ostatni">
+                <a href="https://gawkarol.pencilcode.net/edit/" target="_blank" aria-label="Odkaz na web pencilcode">
+                    <img src="assets/Pencilcode2.png" alt="Pencilcode">
+                    <div class="overlay">
+                        <h3>Pencilcode s úlohami</h3>
+                        <p>Kategorie: Ostatní</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portfolio-item" data-category="ostatni">
+                <a href="https://cedmo.cuni.cz" target="_blank" aria-label="Odkaz na web CEDMO">
+                    <img src="assets/cedmo.png" alt="Pencilcode">
+                    <div class="overlay">
+                        <h3>WEB CEDMO</h3>
+                        <p>Kategorie: Ostatní</p>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item" data-category="ostatni">
+                <a href="edutech.html" target="_blank" aria-label="WEB seminární práce">
+                    <img src="assets/edutech.png" alt="Edutech">
+                    <div class="overlay">
+                        <h3>WEB seminární práce-Kyberbezpečnost</h3>
+                        <p>Kategorie: Ostatní</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portfolio-item" data-category="ostatni">
+                <a href="barvy.html" target="_blank" aria-label="WEB seminární práce">
+                    <img src="assets/barvy1.png" alt="Barvy">
+                    <div class="overlay">
+                        <h3>WEB seminární práce-Barvy</h3>
+                        <p>Kategorie: Ostatní</p>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Karolína Gawlowská</p>
+            <div class="social-links">
+                <a href="mailto:karolina.gawlowska@matfyz.cuni.cz" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/karol%C3%ADna-gawlowsk%C3%A1-869a21243/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="ODKAZ_NA_GITHUB" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
     </div>
+
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

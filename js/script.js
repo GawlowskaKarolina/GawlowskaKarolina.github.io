@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const textToType = "Mgr. Karolína Gawlowská"; 
     let i = 0;
     
-    // Zjištění, jestli je zařízení mobilní. Pro mobily vypneme JS kurzor.
     const isMobile = window.innerWidth <= 768;
 
     function typeWriter() {
@@ -106,4 +105,5 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     }
+
 });
